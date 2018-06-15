@@ -1,14 +1,6 @@
-<div *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>  <!--interpolation binding-->
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div><span>name: </span>{{selectedHero.name}}</div>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>      <!--Angular one way property binding.-->
 
-<div>
-  <label>name:
-    <input [(ngModel)]="hero.name" placeholder="name">     <!--ngModel directive for 2 way data-Binding-->
-  </label>
-</div>
+
 
 <h2>My Heroes</h2>
 <ul class="heroes">
